@@ -1,0 +1,33 @@
+package pl.edu.wszib.lab1.builder.record;
+
+import com.google.auto.value.AutoBuilder;
+import pl.edu.wszib.lab1.builder.Address;
+import pl.edu.wszib.lab1.builder.Gender;
+ record Person (
+
+  String firstName,
+  String lastName,
+  Integer age,
+  Gender gender,
+  Address address
+ ) {
+
+   public static Builder builder(){
+     return new AutoBuilder_Person_Builder();
+   }
+
+   @AutoBuilder
+   interface Builder {
+     Builder firstName(String firstName);
+
+     Builder lastName(String lastName);
+
+     Builder age(Integer age);
+
+     Builder gender(Gender gender);
+
+     Builder address(Address address);
+
+     Person build();
+   }
+ }

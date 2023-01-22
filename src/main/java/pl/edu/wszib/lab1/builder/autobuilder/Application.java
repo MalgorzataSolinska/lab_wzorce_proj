@@ -18,6 +18,11 @@ public class Application {
         .gender(Gender.FEMALE)
         .address(address)
         .build();
+
+    //Metody wytworcze
+//    Person.create();
+//    Person.male();
+//    Person.female();
     System.out.println(person);
   }
 }
