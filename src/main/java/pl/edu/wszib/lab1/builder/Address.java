@@ -6,10 +6,10 @@ public class Address {
   private final String number;
   private final String postalCode;
 
-  private Address(final String city,
-                  final String street,
-                  final String number,
-                  final String postalCode) {
+  public Address(final String city,
+                 final String street,
+                 final String number,
+                 final String postalCode) {
     this.city = city;
     this.street = street;
     this.number = number;

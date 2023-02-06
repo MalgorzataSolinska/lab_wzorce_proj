@@ -4,7 +4,6 @@ import com.google.auto.value.AutoBuilder;
 import pl.edu.wszib.lab1.builder.Address;
 import pl.edu.wszib.lab1.builder.Gender;
  record Person (
-
   String firstName,
   String lastName,
   Integer age,
@@ -16,6 +15,22 @@ import pl.edu.wszib.lab1.builder.Gender;
      return new AutoBuilder_Person_Builder();
    }
 
+   public static Person male(
+       String firstName,
+       String lastName,
+       Integer age,
+       Address address
+   ) {
+     return new Person(firstName, lastName,  age, Gender.MALE, address);
+   }
+   public static Person female(
+       String firstName,
+       String lastName,
+       Integer age,
+       Address address
+   ) {
+     return new Person(firstName, lastName,  age, Gender.FEMALE, address);
+   }
    @AutoBuilder
    interface Builder {
      Builder firstName(String firstName);

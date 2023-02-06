@@ -8,7 +8,7 @@ record Address (
    String street,
    String number,
    String postalCode
-) {
+)  {
 
   static Builder builder(){
     return new AutoBuilder_Address_Builder();
